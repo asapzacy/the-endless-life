@@ -7,6 +7,7 @@
     <title>The Endless Life</title>
     <meta name="description" content="">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt:400,700|Kurale|Raleway:400,300,500,600,700&subset=all" rel="stylesheet">
+    <style>body{width:92%;margin:0 auto;}a{color:#000;}.post{margin:120px 0;line-height:1.5;}"></style>
     <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -20,30 +21,13 @@
         </nav>
       </header>
       <main role="main">
-        <div class="post">
-          <p>published: 02.12.2016, 1:47</p>
-          <h2><a href="">Post #1</a></h2>
-          <h3>swag, swag, swag</h3>
-          <p>Swag ipsum dolor sit amet swagipsum. Swag is not about what you want people to think about you, its already knowing what they think about you. Life is a game, you can play it safe and be good , or you can take a chance and be great. If you judge a book by its cover, you might miss out on an amazing story. Someday someone well walk into your life and make you realize why it never worked out with anyone else. She doesn’t want a perfect guy. She just wants a guy that will treat her perfect Find someone who will change your life, not just your relationship status. Love is like a rubber band, held at both ends by two people. When one leaves, it hurts the others.</p>
-          <h3>swag, swag, swag</h3>
-          <p>Love may be a fantasy, but its the one I love living in. Our society needs to restablish a culture of swag. Every girl has a best friend boyfriend and true love but your lucky if there all the same person. Swag is not something you wear, it is something you are born with. Never focus too intently on negative aspects of life and spend to little time counting your blessing. People will laugh at your dreams then hate you when you make them come true. Dateing your ex again is like buying your clothes back from goodwill. Theres a reason you got rid of them in the first place. Be yourself ,because an original is worth more then a copy.</p>
-          <h3>swag, swag, swag</h3>
-          <p>It's hard to take a role in someone's life when you are not even part of the script. Gravity can not be held responsible for making people fall in love. I always tell people "I'm almost there" even though I haven't left the house. The difference between crush, like, and love is the same as for a while, for now, and forever. My motivation is what sets me apart; that's what makes my swag original. Note to women, your beauty made me look , but its your personality that got me hooked. A guy that truley loves his girl doesn't need to unbutton her shirt to get a better view of her heart. Falling in love is like giving someone a gun and letting them point it at your heart, but trusting them not to pull the trigger.</p>
-          <h3>swag, swag, swag</h3>
-          <p>Women are always interested in men with swag. But swag doesn`t pay the bills! True friends are like condoms, they protect you when things get hard. Swag is not a behavior, it`s an attitude! The reason why people start taking you for granted is becuase you are starting to give to much. Kids call it swag, men call it class. I hate it when I forget to turn my swag off at night and I wake up covered in b*tches. Girls fall in love in what they hear. Boys fall in love in what they see. That's why girls wear make-up and why boys lie. Single doesn't always mean loney and in a relationship doesn't always mean happy.</p>
-        </div>
-        <div class="post">
-          <p>published: 02.12.2016, 1:51</p>
-          <h2><a href="">Post #2</a></h2>
-          <h3>swag, swag, swag</h3>
-          <p>Swag ipsum dolor sit amet swagipsum. Swag is not about what you want people to think about you, its already knowing what they think about you. Life is a game, you can play it safe and be good , or you can take a chance and be great. If you judge a book by its cover, you might miss out on an amazing story. Someday someone well walk into your life and make you realize why it never worked out with anyone else. She doesn’t want a perfect guy. She just wants a guy that will treat her perfect Find someone who will change your life, not just your relationship status. Love is like a rubber band, held at both ends by two people. When one leaves, it hurts the others.</p>
-          <h3>swag, swag, swag</h3>
-          <p>Love may be a fantasy, but its the one I love living in. Our society needs to restablish a culture of swag. Every girl has a best friend boyfriend and true love but your lucky if there all the same person. Swag is not something you wear, it is something you are born with. Never focus too intently on negative aspects of life and spend to little time counting your blessing. People will laugh at your dreams then hate you when you make them come true. Dateing your ex again is like buying your clothes back from goodwill. Theres a reason you got rid of them in the first place. Be yourself ,because an original is worth more then a copy.</p>
-          <h3>swag, swag, swag</h3>
-          <p>It's hard to take a role in someone's life when you are not even part of the script. Gravity can not be held responsible for making people fall in love. I always tell people "I'm almost there" even though I haven't left the house. The difference between crush, like, and love is the same as for a while, for now, and forever. My motivation is what sets me apart; that's what makes my swag original. Note to women, your beauty made me look , but its your personality that got me hooked. A guy that truley loves his girl doesn't need to unbutton her shirt to get a better view of her heart. Falling in love is like giving someone a gun and letting them point it at your heart, but trusting them not to pull the trigger.</p>
-          <h3>swag, swag, swag</h3>
-          <p>Women are always interested in men with swag. But swag doesn`t pay the bills! True friends are like condoms, they protect you when things get hard. Swag is not a behavior, it`s an attitude! The reason why people start taking you for granted is becuase you are starting to give to much. Kids call it swag, men call it class. I hate it when I forget to turn my swag off at night and I wake up covered in b*tches. Girls fall in love in what they hear. Boys fall in love in what they see. That's why girls wear make-up and why boys lie. Single doesn't always mean loney and in a relationship doesn't always mean happy.</p>
-        </div>
+        {% for post in posts %}
+          <div class="post">
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaks }}</p>
+          </div>
+        {% endfor %}
       </main>
       <footer role="contentinfo">
 
