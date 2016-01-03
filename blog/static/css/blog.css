@@ -1,0 +1,67 @@
+html {
+  box-sizing:border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family:'raleway', sans-serif;
+  margin:0;
+}
+a {
+  color:#0a0a0a;
+}
+header {
+  background:#0a0a0a;
+  text-align: center;
+}
+h1 {
+  padding:3.4em 0.4em;
+  margin:0;
+  display:block;
+}
+h1 a {
+  font-family:'kurale', sans-serif;
+  color:#fff;
+  font-size:1.4em;
+  line-height: .96;
+  border-bottom:0.04em solid #0a0a0a;
+  display:inline-block;
+  transition: 0.6s;
+}
+h1 a:hover {
+  color:#eee;
+  border-bottom:0.04em solid #eee;
+  text-decoration: none;
+  transition: 0.6s;
+}
+h2 a {
+  float:left;
+  margin:.6em 0 .8em;
+}
+.post {
+  margin:6em auto 8em;
+  width:96%;
+  padding:4.8%;
+  line-height:1.5;
+  background:#eee;
+}
+p {
+  clear:both;
+}
+p.date {
+    float: right;
+    color: #828282;
+}
+.save {
+    float: right;
+}
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}

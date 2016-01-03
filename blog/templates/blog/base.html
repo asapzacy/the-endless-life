@@ -1,0 +1,42 @@
+<!doctype html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Endless Life</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt:400,700|Kurale|Raleway:400,300,500,600,700&subset=all" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    </head>
+    <body>
+      <header role="header">
+        <h1><a href="/">The Endless Life</a></h1>
+        <nav role="navigation">
+          <ul>
+          </ul>
+        </nav>
+      </header>
+      <main role="main">
+        <div class="content container">
+          <div class="row">
+            <div class="col-md-8">
+              {% block content %}
+              {% endblock %}
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+
+      </footer>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </body>
+</html>

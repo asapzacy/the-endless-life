@@ -1,38 +1,10 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>The Endless Life</title>
-    <meta name="description" content="">
-    <link href="https://fonts.googleapis.com/css?family=Rokkitt:400,700|Kurale|Raleway:400,300,500,600,700&subset=all" rel="stylesheet">
-    <style>body{width:92%;margin:0 auto;}a{color:#000;}.post{margin:120px 0;line-height:1.5;}"></style>
-    <!--[if IE]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    </head>
-    <body>
-      <header role="header">
-        <h1><a href="">The Endless Life</a></h1>
-        <nav role="navigation">
-          <ul>
-          </ul>
-        </nav>
-      </header>
-      <main role="main">
-        {% for post in posts %}
-          <div class="post">
-            <p>published: {{ post.published_date }}</p>
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaks }}</p>
-          </div>
-        {% endfor %}
-      </main>
-      <footer role="contentinfo">
-
-      </footer>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    </body>
-</html>
+{% extends 'blog/base.html' %}
+            {% block content %}
+            <div class="post">
+              {% for post in posts %}
+                  <p class="date">{{ post.published_date }}</p>
+                  <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                  <p>{{ post.text|linebreaks }}</p>
+                </div>
+              {% endfor %}
+            {% endblock %}
